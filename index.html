@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/spop.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style type="text/css">
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            background-repeat: no-repeat;
+            background-position: center center #2D0F0F;
+            background-color: #00BDDC;
+            background-image: url(images/snow.jpg);
+            background-size: 100% 100%;
+        }
+        
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100001;
+        }
+        
+        .gif {
+            height: 200px;
+            width: 100%;
+            z-index: 100002;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .gif img {
+            width: 100%;
+            position: absolute;
+            bottom: 24px;
+            left: -911px;
+        }
+        
+        .anim-text {
+            background-image: linear-gradient(135deg, yellow, rgb(247, 55, 173));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        .letter-inner {
+            background-image: linear-gradient(135deg, yellow, rgb(247, 55, 173));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 雪花背景 -->
+    <div class="snow-container"></div>
+    <div class="gif">
+        <img src="./images/bg-title.gif" alt="">
+    </div>
+
+    <!-- 弹幕 -->
+    <div class="anim-wrap">
+        <div class="anim-text" spellcheck="false"></div>
+    </div>
+
+    <div id="controls" style="display: none;">
+        <select name="selectEffect" id="selectEffect" class="control">
+            <option value="fade">Fade in</option>
+            <option value="slide">Slide in</option>
+            <option value="roll">Roll in</option>
+            <option value="hop">Hop in</option>
+            <option value="converge">Converge</option>
+            <option value="spiral">Spiral</option>
+            <option value="snow">Snow</option>
+            <option value="meteorite">Meteorite</option>
+            <option value="bounce">Bounce</option>
+            <option value="peel">Peel</option>
+            <option value="swivel">Swivel</option>
+            <option value="float">Float</option>
+            <option value="bubble">Bubble</option>
+        </select>
+        <div>
+            <button class="btn animate">Animate</button>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/snow.js"></script>
+<script src="js/spop.min.js"></script>
+<script src="js/index.js"></script>
+
+</html>
